@@ -1,4 +1,4 @@
-# Potoki (Pipes)
+# Potoki
 
 ## wbudowane potoki
 
