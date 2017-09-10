@@ -1,10 +1,10 @@
 # Drzewo Dependecy Injection
 
-![](/assets/component-hierarchy.png)
-
+![](/assets/modules providers.png)
 
 ---
 
 ###### Źródła
 
 * https://angular.io/guide/dependency-injection
+* https://angular.io/guide/hierarchical-dependency-injection
