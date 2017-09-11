@@ -2,7 +2,7 @@
 
 ![](/assets/injectors tree.png)
 
-![](/assets/modules providers.png)
+![](/assets/modules and root injector.png)
 
 ---
 
