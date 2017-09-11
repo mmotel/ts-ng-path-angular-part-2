@@ -2,12 +2,14 @@
 
 ![](/assets/app logic spliting.png)
 
+### podstawy
+
 ```js
 @Injectable()
 export class SomeService {}
 ```
 
-## cache-owanie
+### `cache`
 
 ---
 
