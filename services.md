@@ -1,5 +1,7 @@
 # Serwisy
 
+![](/assets/app logic spliting.png)
+
 ```js
 @Injectable()
 export class SomeService {}
