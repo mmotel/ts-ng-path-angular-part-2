@@ -29,6 +29,8 @@ Aby móc wykorzystać serwis w komponencie musimy go dostarczyć. Robimy to popr
 
 Zalecaną praktyką jest dostarczanie serwisów na poziomie modułów. Głównie ze względu na, to że podczas importowania modułu zyskujemy również dostęp do dostarczanych serwisów.
 
+Jest jedna sytuacja, w której dostarczanie serwisów w module nie jest idealnym rozwiązaniem. Gdy serwis przechowuje stan mocno powiązany z komponentem - na przykład sesję czatu. Dostarczenie serwisu w komponencie pozwoli za każdym razem otrzymać jego nową instancję - na przykład gdy otwieramy kolejne okienko rozmowy.
+
 ```ts
 @NgModule({
   //...
@@ -51,6 +53,8 @@ Po dostarczeniu serwisu w aplikacji, kolejnym krokiem jest jego wstrzyknięcie d
 Przykłady: [app.module.ts](https://github.com/mmotel/ng-beers-app/blob/v15/src/app/app.module.ts), [favourite-beers.service.ts](https://github.com/mmotel/ng-beers-app/blob/v15/src/app/favourite/service/favourite-beer/favourite-beer.service.ts) `v15`
 
 ### `cache`
+
+
 
 ---
 
