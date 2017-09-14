@@ -23,6 +23,33 @@ Zbudujemy serwis obsługujący [`localStorage`](https://developer.mozilla.org/pl
 
 Przykład: [local-storage.service.ts](https://github.com/mmotel/ng-beers-app/blob/v11/src/app/shared/service/local-storage/local-storage.service.ts) `v11`.
 
+### dostarczanie serwisów
+
+Aby móc wykorzystać serwis w komponencie musimy go dostarczyć. Robimy to poprzez umieszczenie serwisu w tablicy `providers`. Mamy do wyboru dostarczenie serwisu w module lub komponencie. 
+
+Zalecaną praktyką jest dostarczanie serwisów na poziomie modułów. Głównie ze względu na, to że podczas importowania modułu zyskujemy również dostęp do dostarczanych serwisów.
+
+```ts
+@NgModule({
+  //...
+  providers: [
+    LocalStorageService
+  ],
+  //...
+})
+export class AppModule {}
+```
+
+Po dostarczeniu serwisu w aplikacji, kolejnym krokiem jest jego wstrzyknięcie do komponentu lub innego serwisu.  
+
+```ts
+  constructor (
+    private _localStorage: LocalStorageService
+  ) { }
+```
+
+Przykłady: [app.module.ts](https://github.com/mmotel/ng-beers-app/blob/v15/src/app/app.module.ts), [favourite-beers.service.ts](https://github.com/mmotel/ng-beers-app/blob/v15/src/app/favourite/service/favourite-beer/favourite-beer.service.ts) `v15`
+
 ### `cache`
 
 ---
