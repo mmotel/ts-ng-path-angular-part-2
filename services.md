@@ -15,7 +15,13 @@ Serwis to klasa opatrzona dekoratorem `@Injectable`.
 export class SomeService {}
 ```
 
+`@Injectable` oznacza klasę jako możliwą do wstrzyknięcia przez framework do zarządzania zależnościami.
 
+` - - - `
+
+Zbudujemy serwis obsługujący [`localStorage`](https://developer.mozilla.org/pl/docs/Web/API/Window/localStorage). 
+
+Przykład: [local-storage.service.ts](https://github.com/mmotel/ng-beers-app/blob/v11/src/app/shared/service/local-storage/local-storage.service.ts) `v11`.
 
 ### `cache`
 
