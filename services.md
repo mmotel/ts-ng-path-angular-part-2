@@ -52,7 +52,19 @@ Po dostarczeniu serwisu w aplikacji, kolejnym krokiem jest jego wstrzyknięcie d
 
 Przykłady: [app.module.ts](https://github.com/mmotel/ng-beers-app/blob/v15/src/app/app.module.ts), [favourite-beers.service.ts](https://github.com/mmotel/ng-beers-app/blob/v15/src/app/favourite/service/favourite-beer/favourite-beer.service.ts) `v15`
 
+`- - -`
+
+Obecnie część serwisów w naszej aplikacji jest dostarczana w komponentach. Przyjrzyjmy się im i poprawny miejsce ich dostarczenia zgodnie z wyżej wymienionymi zaleceniami.
+
+gotowe zmiany `v24`
+
 ### `cache`
+
+omówienie
+
+przykład: cache dla beers list
+
+gotowe zmiany `v25`
 
 
 
