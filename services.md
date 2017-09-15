@@ -56,7 +56,7 @@ Przykłady: [app.module.ts](https://github.com/mmotel/ng-beers-app/blob/v15/src/
 
 Obecnie część serwisów w naszej aplikacji jest dostarczana w komponentach. Przyjrzyjmy się im i poprawny miejsce ich dostarczenia zgodnie z wyżej wymienionymi zaleceniami.
 
-gotowe zmiany `v24`
+Aplikacja po zmianach `v24` ([github](https://github.com/mmotel/ng-beers-app/tree/v24/src/app)).
 
 ### `cache`
 
