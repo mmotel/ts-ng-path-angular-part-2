@@ -4,7 +4,7 @@ Poza modułami oraz komponentami bardzo istotną częścią aplikacji są serwis
 
 ![](/assets/app logic spliting.png)
 
-Są one odpowiedzialne między innymi za powtarzającą logikę, komunikację z serwerem czy też obsługę komunikacji wewnątrz aplikacji.
+Są one odpowiedzialne między innymi za powtarzającą się logikę, komunikację z serwerem czy też obsługę komunikacji wewnątrz aplikacji.
 
 ### podstawy
 
