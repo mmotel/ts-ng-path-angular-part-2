@@ -62,12 +62,13 @@ Aplikacja po zmianach `v24` ([github](https://github.com/mmotel/ng-beers-app/tre
 
 W przypadku niektórych danych warto byłoby je zapamiętać po pierwszym pobraniu. Idealnymi kandydatami są dane, które są często potrzebne a zmieniają się relatywnie rzadko, na przykład profil użytkownika czy ustawienia aplikacji.
 
-W naszej aplikacji warto byłoby zapamiętać listę piw oraz szczegóły piwa.
+Kiedy nasz serwis pełni również funkcję `cache`-a należy zwrócić uwagę gdzie go dostarczamy. Najlepszym miejsce na to jest oczywiście moduł, a dokładniej `AppModule`.
 
-przykład: cache dla beers list
+`- - -`
 
-gotowe zmiany `v25`
+W naszej aplikacji warto byłoby zapamiętać listę piw, której pobranie jest najbardziej kosztowne.
 
+Przykład: [beers.service.ts](https://github.com/mmotel/ng-beers-app/blob/v25/src/app/shared/service/beer.service.ts) `v25`
 
 
 ---
