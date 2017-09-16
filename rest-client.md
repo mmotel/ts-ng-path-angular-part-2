@@ -12,4 +12,4 @@ Znacznie lepszym rozwiązaniem jest stworzenie serwisu, który będzie adapterem
 
 W naszej aplikacji obecnie z API korzysta jeden serwis. Pomimo tego część implementacji metod się powtarza. Stworzymy swój  `RestClientService`, w którym ukryjemy część implementacji.
 
-Przykłady: beer.service.ts, rest-client.service.ts `v26`
+Przykłady: [beer.service.ts](https://github.com/mmotel/ng-beers-app/blob/v26/src/app/shared/service/beer.service.ts), [rest-client.service.ts](https://github.com/mmotel/ng-beers-app/blob/v26/src/app/shared/service/rest-client/rest-client.service.ts) `v26`
