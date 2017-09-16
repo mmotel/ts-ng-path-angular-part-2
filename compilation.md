@@ -1,3 +1,3 @@
 # Kompilacja
 
-JIT vs AOT
+![](/assets/JiT vs AoT.png)
