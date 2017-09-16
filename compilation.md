@@ -1,0 +1,3 @@
+# Kompilacja
+
+JIT vs AOT
