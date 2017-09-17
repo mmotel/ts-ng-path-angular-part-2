@@ -6,9 +6,10 @@
 
 * **dyrektywy strukturalne** - zmieniają układ `DOM`-u dodając oraz usuwając jego elementy, na przykład `*ngFor`, `*ngIf`,
 
-* **dyrektywy atrybutowe** - zmieniają wygląd oraz zachowanie elementów `DOM`, komponentów czy też innych dyrektyw.
+* **dyrektywy atrybutu** - zmieniają wygląd oraz zachowanie elementów `DOM`, komponentów czy też innych dyrektyw.
 
-## Dyrektywy atrybutowe
+
+## Dyrektywy atrybutu
 
 ```js
 @Directive({ selector: '[myHighlight]' })
@@ -18,6 +19,7 @@ export class HighlightDirective {
     }
 }
 ```
+
 
 ## Dyrektywy strukturalne
 
