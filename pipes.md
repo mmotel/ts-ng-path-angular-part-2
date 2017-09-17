@@ -72,7 +72,7 @@ export class CutWordsPipe implements PipeTransform {
 
 Zdefiniujemy potok służący do przycinania napisów do wskazanej długości ale bez _rozcinania_ słów. Następnie wykorzystamy go na widoku listy piw do przycinania opisów do maksymalnie 80 znaków.
 
-Przykłady: cut-words.pipe.ts, shared/beers-list.component.html `v27`
+Przykłady: [cut-words.pipe.ts](https://github.com/mmotel/ng-beers-app/blob/v27/src/app/shared/pipe/cut-words/cut-words.pipe.ts), [shared/beers-list.component.html](https://github.com/mmotel/ng-beers-app/blob/v27/src/app/shared/beers-list/beers-list.component.html) `v27`
 
 
 ---
