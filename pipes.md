@@ -51,7 +51,7 @@ Oczywiście mamy również możliwość tworzenia swoich własnych potoków.
 Potok jest to klasa posiadająca dekorator `@Pipe()`, do którego przekazujemy jego metadane - najważniejsza jest nazwa.
 
 ```ts
-@Pipe({name: 'cut-words'})
+@Pipe({name: 'cutWords'})
 export class CutWordsPipe {}
 ```
 
@@ -70,9 +70,9 @@ export class CutWordsPipe implements PipeTransform {
 
 `- - -`
 
-Zdefiniujemy potok służący do przycinania napisów do wskazanej długości ale bez _rozcinania_ słów. Następnie wykorzystamy go na widoku listy piw do przycinania opisów do maksymalnie 30 znaków.
+Zdefiniujemy potok służący do przycinania napisów do wskazanej długości ale bez _rozcinania_ słów. Następnie wykorzystamy go na widoku listy piw do przycinania opisów do maksymalnie 80 znaków.
 
-Przykłady: cut-words.pipe.ts, shared/beers-list.component.html `
+Przykłady: cut-words.pipe.ts, shared/beers-list.component.html `v27`
 
 
 ---
