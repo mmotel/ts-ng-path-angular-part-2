@@ -1,8 +1,38 @@
 # Potoki
 
+Każda aplikacja ma w zasadzie to samo proste zadanie - pobrać i wyświetlić dane. W toku prac zauważamy, że dokonujemy często tych samych transformacji pewnych danych. Idealnym rozwiązaniem byłoby dodawanie tych transformacji w `HTML`-u podobnie jak dodajemy style.
+
+Z pomocą przychodzą nam potoki (_ang. pipes_). 
+
 ![](/assets/pipe.png)
 
-## wbudowane potoki
+### podstawy
+
+Aby skorzystać z potoku używamy notacji jaką możemy znać między innymi z systemu `Linux`. 
+
+```ts
+{{ beer.name | uppercase }}
+```
+
+Dodatkowe parametry potoku umieszczamy po znaku `:`.
+
+```ts
+{{ beer.name | slice: 10 }}
+
+```
+
+Możemy również łączyć ze sobą potoki.
+
+```ts
+{{ beer.name | slice: 10 | uppercase }}
+
+```
+
+### wbudowane potoki
+
+`Angular` ma zbiór wbudowanych potoków dostępnych w każdym szablonie.
+
+Oto kilka z nich:
 
 * [`DatePipe`](https://angular.io/api/common/DatePipe),
 * [`JsonPipe`](https://angular.io/api/common/JsonPipe),
@@ -14,17 +44,33 @@
 * [`UpperCasePipe`](https://angular.io/api/common/UpperCasePipe),
 * [`TitleCasePipe`](https://angular.io/api/common/TitleCasePipe).
 
-## customowe potoki
+## tworzenie potoków
 
-```js
-@Pipe({name: 'exponentialStrength'})
-export class ExponentialStrengthPipe implements PipeTransform {
-  transform(value: number, exponent: string): number {
-    let exp = parseFloat(exponent);
-    return Math.pow(value, isNaN(exp) ? 1 : exp);
+Oczywiście mamy również możliwość tworzenia swoich własnych potoków. 
+
+Potok jest to klasa posiadająca dekorator `@Pipe()`, do którego przekazujemy jego metadane - najważniejsza jest nazwa.
+
+```ts
+@Pipe({name: 'cutWords'})
+export class CutWordsPipe {}
+```
+
+Drugą istotną kwestią jest implementacja interfejsu [`PipeTransform`](https://angular.io/api/core/PipeTransform).
+
+```ts
+export class CutWordsPipe implements PipeTransform {
+
+  transform(value: string, length: number): string {
+    // ...
+    return value;
   }
+  
 }
 ```
+
+`- - -`
+
+
 
 
 ---
