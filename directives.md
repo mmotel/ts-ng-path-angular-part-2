@@ -21,9 +21,9 @@ export class HighlightDirective {
 
 ## Dyrektywy strukturalne
 
-### *ngIf
+### `*ngIf`
 
-### *ngFor
+### `*ngFor`
 
 
 ---
