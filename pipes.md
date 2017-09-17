@@ -44,7 +44,7 @@ Oto kilka z nich:
 * [`UpperCasePipe`](https://angular.io/api/common/UpperCasePipe),
 * [`TitleCasePipe`](https://angular.io/api/common/TitleCasePipe).
 
-## tworzenie potoków
+## Tworzenie potoków
 
 Oczywiście mamy również możliwość tworzenia swoich własnych potoków. 
 

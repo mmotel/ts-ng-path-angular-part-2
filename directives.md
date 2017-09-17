@@ -1,6 +1,14 @@
 # Dyrektywy
 
-## Atribute directive
+`Angular` ma trzy rodzaje dyrektyw:
+
+* **komponenty** - dyrektywy z szablonem,
+
+* **dyrektywy strukturalne** - zmieniają układ `DOM`-u dodając oraz usuwając jego elementy, na przykład `*ngFor`, `*ngIf`,
+
+* **dyrektywy atrybutowe** - zmieniają wygląd oraz zachowanie elementów `DOM`, komponentów czy też innych dyrektyw.
+
+## Dyrektywy atrybutowe
 
 ```js
 @Directive({ selector: '[myHighlight]' })
