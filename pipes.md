@@ -13,3 +13,9 @@ export class ExponentialStrengthPipe implements PipeTransform {
   }
 }
 ```
+
+---
+
+###### Źródła
+
+* https://angular.io/guide/pipes

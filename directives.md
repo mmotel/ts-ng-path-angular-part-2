@@ -16,3 +16,11 @@ export class HighlightDirective {
 ### *ngIf
 
 ### *ngFor
+
+
+---
+
+###### Źródła
+
+* https://angular.io/guide/attribute-directives
+* https://angular.io/guide/structural-directives
