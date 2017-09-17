@@ -19,7 +19,7 @@ export class HighlightDirective {
 }
 ```
 
-## Structural directive
+## Dyrektywy strukturalne
 
 ### *ngIf
 
