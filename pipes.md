@@ -1,5 +1,7 @@
 # Potoki
 
+![](/assets/pipe.png)
+
 ## wbudowane potoki
 
 * [`DatePipe`](https://angular.io/api/common/DatePipe),
