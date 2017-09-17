@@ -14,6 +14,7 @@ export class ExponentialStrengthPipe implements PipeTransform {
 }
 ```
 
+
 ---
 
 ###### Źródła
