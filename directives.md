@@ -136,7 +136,56 @@ Aby zobaczyć co dzieje się _pod maską_ przyjrzymy się bliżej dyrektywie `*n
 </div>
 ```
 
-Gdy kompilator widzi taki zapis zamienia go na `<ng-tempalte>` z prostym przypisaniem atrybutu `[ngIf]`.
+Gdy kompilator widzi taki zapis zamienia go na atrybut `tempate`.
+
+```html
+<div template="ngIf condition">
+    <!-- ... -->
+</div>
+```
+
+Kolejnym krokiem jest zamiana na `<ng-tempalte>` z prostym przypisaniem atrybutu `[ngIf]`.
+
+```html
+<ng-template [ngIf]="conditin">
+    <div>
+        <!-- ... -->
+    </div>
+</ng-template>
+```
+
+W tym momencie `*ngIf` ma już proste zadanie i działa dokładnie tak jak dyrektywa atrybutu, która umieszcza bądź usuwa swoją zawartość w elemencie `<ng-tempalte>`.
+
+Aby móc dokonać tej manipulacji potrzebujemy dostp do elementów reprezentujących:
+
+ * zawartość szablonu - [`TemplateRef`](https://angular.io/api/core/TemplateRef),
+ * miejsce, w którym został on zdefiniowany - [`ViewContainerRef`](https://angular.io/api/core/ViewContainerRef).
+ 
+Implementacja `*ngIf` może wyglądać następująco:
+
+```ts
+@Directive({
+  selector: '[ngIf]'
+})
+export class NgIfDirective {
+
+  @Input() set ngIf (condition: boolean) {
+    if (condition) {
+      this.viewContainer.createEmbeddedView(this.templateRef);
+    } else {
+      this.viewContainer.clear();
+    }
+  }
+
+  constructor(
+    private templateRef: TemplateRef<any>,
+    private viewContainer: ViewContainerRef
+  ) {}
+
+}
+```
+
+
 
 #### Dla zainteresowanych: [Nir Kaufman - Demystified Angular Directives (JS-Poland 2017)](https://youtu.be/bVyw2njDoZw?t=1m10s)
 
