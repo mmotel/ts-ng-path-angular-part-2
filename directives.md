@@ -25,6 +25,8 @@ Najpopularniejszą dyrektywą atrybytu jest [`ngStyle`](https://angular.io/api/c
 
 Dyrektywy podobnie jak komponenty mają swoje selektory. Definiujemy je podając metadane do dekoratora `@Directive`. 
 
+**Ważnym szczegółem jest konieczność otoczenia nazwy dyrektywy kwadratowymi nawiasami `[]` aby mógł on być używany jako atrybut.**
+
 ```ts
 @Directive({ 
     selector: '[appAutoFocus]' 
@@ -116,9 +118,25 @@ Przykłady: [beers-search.component.html](https://github.com/mmotel/ng-beers-app
 
 ## Dyrektywy strukturalne
 
+Dyrektywy strukturalne (_ang. structural directive_) służą do manipulowania układem elementów widoku. Zazwyczaj poprzez dodawanie, usuwanie oraz modyfikowanie elementów `DOM`. 
+
+Najpopularniejszymi przykładami są `*ngIf` oraz `*ngFor`. 
+
+### przedrostek `*`
+
+Dyrektywę strukturalną łatwo rozpoznać dzięki przedrostkowi `*`. Nie jest to jednak jedynie konwencja ale uproszczona notacja, którą `Angular` tłumaczy na element `<ng-template>`.
+
 ### `*ngIf`
 
-### `*ngFor`
+Aby zobaczyć co dzieje się _pod maską_ przyjrzymy się bliżej dyrektywie `*ngIf`.
+
+```html
+<div *ngIf="condition">
+    <!-- ... -->
+</div>
+```
+
+Gdy kompilator widzi taki zapis zamienia go na `<ng-tempalte>` z prostym przypisaniem atrybutu `[ngIf]`.
 
 #### Dla zainteresowanych: [Nir Kaufman - Demystified Angular Directives (JS-Poland 2017)](https://youtu.be/bVyw2njDoZw?t=1m10s)
 
