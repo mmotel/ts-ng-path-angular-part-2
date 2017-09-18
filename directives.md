@@ -158,7 +158,7 @@ W tym momencie `*ngIf` ma już proste zadanie i działa dokładnie tak jak dyrek
 
 Aby móc dokonać tej manipulacji potrzebujemy dostp do elementów reprezentujących:
 
- * zawartość szablonu - [`TemplateRef`](https://angular.io/api/core/TemplateRef),
+ * zawartość `<ng-template>` - [`TemplateRef`](https://angular.io/api/core/TemplateRef),
  * miejsce, w którym został on zdefiniowany - [`ViewContainerRef`](https://angular.io/api/core/ViewContainerRef).
  
 Implementacja `*ngIf` może wyglądać następująco:
@@ -185,7 +185,7 @@ export class NgIfDirective {
 }
 ```
 
-Można więc powiedzieć, że `Angular` jest napisany w `Angular`-ze a jednym z jego najważniejszych elementów to dyrektywy.
+#### Można więc powiedzieć, że `Angular` jest napisany w `Angular`-ze.
 
 #### Dla zainteresowanych: [Nir Kaufman - Demystified Angular Directives (JS-Poland 2017)](https://youtu.be/bVyw2njDoZw?t=1m10s)
 
