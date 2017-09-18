@@ -17,7 +17,7 @@ Dyrektywy podobnie jak komponenty mają swoje selektory. Definiujemy je podając
 
 ```ts
 @Directive({ 
-    selector: '[autoFocus]' 
+    selector: '[appAutoFocus]' 
 })
 export class AutoFocusDirective {}
 ```
@@ -26,7 +26,7 @@ Dostęp do elementu uzyskujemy w konstruktorze, który jako parametr otrzymuje o
 
 ```ts
 @Directive({ 
-    selector: '[autoFocus]' 
+    selector: '[appAutoFocus]' 
 })
 export class AutoFocusDirective {
 
@@ -41,7 +41,7 @@ W dyrektywie podobnie jak w komponencie możemy skorzystać z [uchwytów do jego
 
 ```ts
 @Directive({ 
-    selector: '[autoFocus]' 
+    selector: '[appAutoFocus]' 
 })
 export class AutoFocusDirective implements AfterViewInit {
 
@@ -60,11 +60,11 @@ Mamy również możliwość definiowania dodatkowych parametrów dyrektyw. Ponow
 
 ```ts
 @Directive({ 
-    selector: '[autoFocus]' 
+    selector: '[appAutoFocus]' 
 })
 export class AutoFocusDirective implements AfterViewInit {
 
-    @Input('autoFocusActive') isActive: boolean;
+    @Input('appAutoFocusActive') isActive: boolean;
 
     constructor(element: ElementRef) {
         //...
@@ -84,8 +84,8 @@ Aby wykorzystać naszą dyrektywę umieszczamy ją w wybranym elemencie szablonu
   <input mdInput
     [(ngModel)]="searchPhrase"
     [disabled]="!isActive"
-    autoFocus
-    [autoFocusActive]="isActive"
+    appAutoFocus
+    [appAutoFocusActive]="isActive"
     type="text"
     placeholder="Search..."
   >
