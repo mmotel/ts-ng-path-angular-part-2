@@ -13,6 +13,8 @@
 
 Dyrektywa atrybutu (_ang. attribute directive_) pozwala uzyskać dostęp do natywnego elementu `DOM`-u i dokonać jego modyfikacji.
 
+### podstawy
+
 Dyrektywy podobnie jak komponenty mają swoje selektory. Definiujemy je podając metadane do dekoratora `@Directive`. 
 
 ```ts
@@ -37,6 +39,8 @@ export class AutoFocusDirective {
 }
 ```
 
+### cykl życia
+
 W dyrektywie podobnie jak w komponencie możemy skorzystać z [uchwytów do jego cyklu życia](https://mmotel.gitbooks.io/ts-ng-path-angular-part-1/content/component-lifecycle.html). Aby to zrobić poprostu je implementujemy.
 
 ```ts
@@ -55,6 +59,8 @@ export class AutoFocusDirective implements AfterViewInit {
 
 }
 ```
+
+### dodatkowe parametry
 
 Mamy również możliwość definiowania dodatkowych parametrów dyrektyw. Ponownie, podobnie jak w komponentach, korzystamy z `@Input`.
 
@@ -76,6 +82,8 @@ export class AutoFocusDirective implements AfterViewInit {
 
 }
 ```
+
+### wykorzystanie
 
 Aby wykorzystać naszą dyrektywę umieszczamy ją w wybranym elemencie szablonu.
 
