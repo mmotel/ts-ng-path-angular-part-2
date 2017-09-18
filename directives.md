@@ -96,7 +96,7 @@ Aby wykorzystać naszą dyrektywę umieszczamy ją w wybranym elemencie szablonu
 
 Zbudujemy swoją dyrektywę, która będzie ustawiała `focus` na naszą wyszukiwarkę piw kiedy stanie się ona aktywna.
 
-Przykłady: beers-search.component.html, auto-focus.directive.ts `v28`
+Przykłady: [beers-search.component.html](https://github.com/mmotel/ng-beers-app/blob/v28/src/app/shared/beers-search/beers-search.component.html), [auto-focus.directive.ts](https://github.com/mmotel/ng-beers-app/blob/v28/src/app/shared/directive/auto-focus.directive.ts) `v28`
 
 ## Dyrektywy strukturalne
 
