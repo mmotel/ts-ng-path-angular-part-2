@@ -104,6 +104,7 @@ Przykłady: [beers-search.component.html](https://github.com/mmotel/ng-beers-app
 
 ### `*ngFor`
 
+#### Dla zainteresowanych: [Nir Kaufman - Demystified Angular Directives (JS-Poland 2017)](https://www.youtube.com/watch?v=bVyw2njDoZw)
 
 ---
 
