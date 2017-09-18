@@ -96,6 +96,8 @@ Aby wykorzystać naszą dyrektywę umieszczamy ją w wybranym elemencie szablonu
 
 Zbudujemy swoją dyrektywę, która będzie ustawiała `focus` na naszą wyszukiwarkę piw kiedy stanie się ona aktywna.
 
+Przykłady: beers-search.component.html, auto-focus.directive.ts `v28`
+
 ## Dyrektywy strukturalne
 
 ### `*ngIf`
