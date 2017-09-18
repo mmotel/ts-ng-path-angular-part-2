@@ -13,6 +13,14 @@
 
 Dyrektywa atrybutu (_ang. attribute directive_) pozwala uzyskać dostęp do natywnego elementu `DOM`-u i dokonać jego modyfikacji.
 
+Najpopularniejszą dyrektywą atrybytu jest [`ngStyle`](https://angular.io/api/common/NgStyle), która służy do manipulacji stylami elementu.
+
+```html
+<div [ngStyle]="{'style-name': styleValue}">
+ <!-- ... -->
+</div>
+```
+
 ### podstawy
 
 Dyrektywy podobnie jak komponenty mają swoje selektory. Definiujemy je podając metadane do dekoratora `@Directive`. 
