@@ -35,6 +35,11 @@ ng serve
 Aplikacja jest podzielona na kroki oznaczone tagami. W trakcie tego szkolenia przyjrzymy się następującym tagom:
 
 ```
-
+v11             LocalStorageService
+v24             services providers in modules
+v25             cache in service
+v26             REST API Client
+v27             custom pipe
+v28             custom attribute directive
 ```
 
