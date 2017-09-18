@@ -185,7 +185,7 @@ export class NgIfDirective {
 }
 ```
 
-
+Można więc powiedzieć, że `Angular` jest napisany w `Angular`-ze a jednym z jego najważniejszych elementów to dyrektywy.
 
 #### Dla zainteresowanych: [Nir Kaufman - Demystified Angular Directives (JS-Poland 2017)](https://youtu.be/bVyw2njDoZw?t=1m10s)
 
