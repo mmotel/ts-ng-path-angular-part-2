@@ -11,15 +11,90 @@
 
 ## Dyrektywy atrybutu
 
-```js
-@Directive({ selector: '[myHighlight]' })
-export class HighlightDirective {
-    constructor(el: ElementRef) {
-       el.nativeElement.style.backgroundColor = 'yellow';
+Dyrektywa atrybutu (_ang. attribute directive_) pozwala uzyskać dostęp do natywnego elementu `DOM`-u i dokonać jego modyfikacji.
+
+Dyrektywy podobnie jak komponenty mają swoje selektory. Definiujemy je podając metadane do dekoratora `@Directive`. 
+
+```ts
+@Directive({ 
+    selector: '[autoFocus]' 
+})
+export class AutoFocusDirective {}
+```
+
+Dostęp do elementu uzyskujemy w konstruktorze, który jako parametr otrzymuje obiekty typu `ElementRef`.
+
+```ts
+@Directive({ 
+    selector: '[autoFocus]' 
+})
+export class AutoFocusDirective {
+
+    constructor(element: ElementRef) {
+        //...
     }
+
 }
 ```
 
+W dyrektywie podobnie jak w komponencie możemy skorzystać z [uchwytów do jego cyklu życia](https://mmotel.gitbooks.io/ts-ng-path-angular-part-1/content/component-lifecycle.html). Aby to zrobić poprostu je implementujemy.
+
+```ts
+@Directive({ 
+    selector: '[autoFocus]' 
+})
+export class AutoFocusDirective implements AfterViewInit {
+
+    constructor(element: ElementRef) {
+        //...
+    }
+    
+    ngAfrterViewInit () {
+        //...
+    }
+
+}
+```
+
+Mamy również możliwość definiowania dodatkowych parametrów dyrektyw. Ponownie, podobnie jak w komponentach, korzystamy z `@Input`.
+
+```ts
+@Directive({ 
+    selector: '[autoFocus]' 
+})
+export class AutoFocusDirective implements AfterViewInit {
+
+    @Input('autoFocusActive') isActive: boolean;
+
+    constructor(element: ElementRef) {
+        //...
+    }
+    
+    ngAfrterViewInit () {
+        //...
+    }
+
+}
+```
+
+Aby wykorzystać naszą dyrektywę umieszczamy ją w wybranym elemencie szablonu.
+
+```html
+<md-input-container>
+  <input mdInput
+    [(ngModel)]="searchPhrase"
+    [disabled]="!isActive"
+    autoFocus
+    [autoFocusActive]="isActive"
+    type="text"
+    placeholder="Search..."
+  >
+</md-input-container>
+```
+
+`- - -`
+
+Zbudujemy swoją dyrektywę, która będzie ustawiała `focus` na naszą wyszukiwarkę piw kiedy stanie się ona aktywna.
 
 ## Dyrektywy strukturalne
 
